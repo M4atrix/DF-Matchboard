@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Local Delta Force community match archive and cumulative leaderboard.">
+  <title>DF Matchboard</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1117'/%3E%3Cpath d='M12 15h40L32 53z' fill='%234bd2a1'/%3E%3Cpath d='M23 23h18L32 42z' fill='%230b1117'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#leaderboard" aria-label="DF Matchboard home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>DF MATCHBOARD</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#leaderboard" data-route-link="leaderboard">Leaderboard</a>
+      <a href="#matches" data-route-link="matches">Matches</a>
+      <a href="#players" data-route-link="players">Players</a>
+      <a href="#split" data-route-link="split">Split teams</a>
+      <a href="#import" data-route-link="import">Add match</a>
+    </nav>
+    <button class="icon-button" id="export-backup" title="Download complete backup" aria-label="Download complete backup">↓</button>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <dialog id="image-dialog">
+    <div class="dialog-bar">
+      <strong id="dialog-title">Original screenshot</strong>
+      <button class="icon-button" data-close-dialog aria-label="Close">×</button>
+    </div>
+    <img id="dialog-image" alt="Original match scoreboard screenshot">
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="tesseract.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
